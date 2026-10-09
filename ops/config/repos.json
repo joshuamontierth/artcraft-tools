@@ -1,0 +1,268 @@
+{
+  "_comment": "Single source of truth for the ArtCraft ops scripts (Windows and Linux). Paths are relative to the workspace root (the folder that holds the repos and ops/). Control ports are made unique per app so several apps can run at once (upstream defaults collide on 7979).",
+  "repos": [
+    {
+      "name": "photocraft",
+      "title": "PhotoCraft",
+      "adobe": "Adobe Photoshop",
+      "url": "https://github.com/storytold/photocraft.git",
+      "branch": "main",
+      "build_packages": [
+        "photocraft",
+        "photocraft-cli"
+      ],
+      "gui_exe": "photocraft",
+      "cli_exe": "photocraft-cli",
+      "control_port": 7878,
+      "token_file": true,
+      "gui_args": [
+        "--control",
+        "{port}",
+        "--control-token-file",
+        "{token_file}",
+        "--automation-read-root",
+        "{work_dir}",
+        "--automation-write-root",
+        "{work_dir}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--bridge",
+        "127.0.0.1:{port}",
+        "--control-token-file",
+        "{token_file}"
+      ],
+      "mcp_headless_args": [
+        "mcp",
+        "--automation-read-root",
+        "{work_dir}",
+        "--automation-write-root",
+        "{work_dir}"
+      ],
+      "course": true
+    },
+    {
+      "name": "lightcraft",
+      "title": "LightCraft",
+      "adobe": "Adobe Lightroom Classic",
+      "url": "https://github.com/storytold/lightcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "lightcraft",
+        "lightcraft-cli"
+      ],
+      "gui_exe": "lightcraft",
+      "cli_exe": "lightcraft-cli",
+      "control_port": 7980,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp",
+        "{work_dir}"
+      ],
+      "course": true
+    },
+    {
+      "name": "filmcraft",
+      "title": "FilmCraft",
+      "adobe": "Adobe Premiere Pro",
+      "url": "https://github.com/storytold/filmcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "filmcraft",
+        "filmcraft-cli"
+      ],
+      "gui_exe": "filmcraft",
+      "cli_exe": "filmcraft-cli",
+      "control_port": 9876,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--bridge",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp",
+        "--demo"
+      ],
+      "course": true
+    },
+    {
+      "name": "effectcraft",
+      "title": "EffectCraft",
+      "adobe": "Adobe After Effects",
+      "url": "https://github.com/storytold/effectcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "effectcraft",
+        "effectcraft-cli"
+      ],
+      "gui_exe": "effectcraft",
+      "cli_exe": "effectcraft-cli",
+      "control_port": 9877,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--bridge",
+        "{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp",
+        "--demo"
+      ],
+      "course": false
+    },
+    {
+      "name": "vectorcraft",
+      "title": "VectorCraft",
+      "adobe": "Adobe Illustrator",
+      "url": "https://github.com/storytold/vectorcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "vectorcraft",
+        "vectorcraft-cli"
+      ],
+      "gui_exe": "vectorcraft",
+      "cli_exe": "vectorcraft-cli",
+      "control_port": 7979,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp",
+        "--headless"
+      ],
+      "course": false
+    },
+    {
+      "name": "designcraft",
+      "title": "DesignCraft",
+      "adobe": "Adobe InDesign",
+      "url": "https://github.com/storytold/designcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "designcraft",
+        "designcraft-cli"
+      ],
+      "gui_exe": "designcraft",
+      "cli_exe": "designcraft-cli",
+      "control_port": 7972,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp"
+      ],
+      "course": false
+    },
+    {
+      "name": "pdfcraft",
+      "title": "PdfCraft",
+      "adobe": "Adobe Acrobat",
+      "url": "https://github.com/storytold/pdfcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "pdfcraft",
+        "pdfcraft-cli"
+      ],
+      "gui_exe": "pdfcraft",
+      "cli_exe": "pdfcraft-cli",
+      "control_port": null,
+      "token_file": false,
+      "gui_args": [],
+      "mcp_live_args": null,
+      "mcp_headless_args": [
+        "mcp",
+        "--root",
+        "{work_dir}"
+      ],
+      "course": false
+    },
+    {
+      "name": "wordcraft",
+      "title": "WordCraft",
+      "adobe": "Microsoft Word",
+      "url": "https://github.com/storytold/wordcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "wordcraft",
+        "wordcraft-cli"
+      ],
+      "gui_exe": "wordcraft",
+      "cli_exe": "wordcraft-cli",
+      "control_port": 7981,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp"
+      ],
+      "course": false
+    },
+    {
+      "name": "cadcraft",
+      "title": "CADCraft",
+      "adobe": "Autodesk AutoCAD",
+      "url": "https://github.com/storytold/cadcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "cadcraft",
+        "cadcraft-cli"
+      ],
+      "gui_exe": "cadcraft",
+      "cli_exe": "cadcraft-cli",
+      "control_port": 7971,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp"
+      ],
+      "course": false
+    }
+  ]
+}

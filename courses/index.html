@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArtCraft Academy</title>
+<meta name="description" content="Beginner courses for PhotoCraft, LightCraft and FilmCraft, with Claude as your co-pilot.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e8a33d'/%3E%3Cpath d='M9 22l7-13 7 13' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="app/styles.css">
+<script>
+  // Apply the saved theme before first paint.
+  try { var t = localStorage.getItem('artcraft-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  try { if (localStorage.getItem('artcraft-compact') === '1') document.documentElement.classList.add('compact'); } catch (e) {}
+</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn only-narrow" id="menuBtn" aria-label="Show lessons" title="Lessons">&#9776;</button>
+  <a class="brand" href="#/">
+    <span class="brand-mark" aria-hidden="true">A</span>
+    <span class="brand-text">ArtCraft <span class="brand-sub">Academy</span></span>
+  </a>
+  <nav class="course-tabs" id="courseTabs" aria-label="Courses"></nav>
+  <div class="topbar-right">
+    <form class="search" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search lessons" aria-label="Search lessons" autocomplete="off">
+    </form>
+    <button class="icon-btn" id="compactBtn" title="Compact mode: tighter layout for docking beside the app" aria-label="Toggle compact mode">&#8690;</button>
+    <button class="icon-btn" id="themeBtn" title="Toggle light/dark" aria-label="Toggle theme">&#9680;</button>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="Course contents"></aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main" id="main" tabindex="-1"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="lightbox" id="lightbox" hidden><img alt=""><p></p></div>
+
+<!-- Course data: each file pushes one course onto window.ARTCRAFT_COURSES. Missing files are skipped. -->
+<script src="data/start.js"></script>
+<script src="data/photocraft.js" onerror="void 0"></script>
+<script src="data/lightcraft.js" onerror="void 0"></script>
+<script src="data/filmcraft.js" onerror="void 0"></script>
+<script src="assets/manifest.js" onerror="void 0"></script>
+<script src="app/app.js"></script>
+</body>
+</html>

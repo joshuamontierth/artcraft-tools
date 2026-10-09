@@ -1,0 +1,25 @@
+# The toolkit shares its folder with the ArtCraft app repos it clones and builds. Ignore everything at the
+# top level except the toolkit's own files, so app clones never get committed.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/SECURITY-REPORT.md
+!/LICENSE
+!/ops/
+!/courses/
+
+# Local gate state, logs and generated reports
+/ops/state/
+/ops/logs/
+/ops/reports/
+/ops/work/
+/ops/security/reports/
+/ops/security/triage/
+
+# Course practice files (downloaded by fetch-course-assets) and authoring notes
+/courses/assets/*/
+/courses/research/
+
+__pycache__/
+*.pyc

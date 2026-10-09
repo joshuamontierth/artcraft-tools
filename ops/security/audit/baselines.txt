@@ -1,0 +1,11 @@
+# Commits covered by the 2026-10-09 full security audit (see ops/security/audit/<repo>.md).
+# `adopt-audit-baseline` makes these your gate baselines; everything after them is gate-scanned.
+cadcraft     59631c8d4f9ffe6c08c5c2065ea17504e53bf821
+designcraft  14e677b24216396e398823ff034d9882322362d1
+effectcraft  cae67546dd8db672706698a3ad897b758b0339f3
+filmcraft    5231852443363f001c3f6b396dd9b1e6461ae2be
+lightcraft   c435d143de921e8dc724245065500bc191f91102
+pdfcraft     a6bc63a497954af87c1cd5a2a1e72e928a11c039
+photocraft   ec350d64aedd019afc5eda290cc32909bc9bab7d
+vectorcraft  d464f28ed3d80cc0debc00c6c56e9aa049d99723
+wordcraft    7584b9b2930ffddfe7db96b6eba977262e55135c
