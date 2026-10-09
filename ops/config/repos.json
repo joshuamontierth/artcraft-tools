@@ -263,6 +263,90 @@
         "mcp"
       ],
       "course": false
+    },
+    {
+      "name": "deckcraft",
+      "title": "DeckCraft",
+      "adobe": "Microsoft PowerPoint",
+      "url": "https://github.com/storytold/deckcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "deckcraft",
+        "deckcraft-cli"
+      ],
+      "gui_exe": "deckcraft",
+      "cli_exe": "deckcraft-cli",
+      "control_port": 7990,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp"
+      ],
+      "course": false
+    },
+    {
+      "name": "gridcraft",
+      "title": "GridCraft",
+      "adobe": "Microsoft Excel",
+      "url": "https://github.com/storytold/gridcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "gridcraft",
+        "gridcraft-cli"
+      ],
+      "gui_exe": "gridcraft",
+      "cli_exe": "gridcraft-cli",
+      "control_port": 7982,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp"
+      ],
+      "course": false
+    },
+    {
+      "name": "soundcraft",
+      "title": "SoundCraft",
+      "adobe": "Avid Pro Tools",
+      "url": "https://github.com/storytold/soundcraft.git",
+      "branch": "main",
+      "build_packages": [
+        "soundcraft",
+        "soundcraft-cli"
+      ],
+      "gui_exe": "soundcraft",
+      "cli_exe": "soundcraft-cli",
+      "control_port": 7801,
+      "token_file": false,
+      "gui_args": [
+        "--control",
+        "{port}"
+      ],
+      "mcp_live_args": [
+        "mcp",
+        "--connect",
+        "127.0.0.1:{port}"
+      ],
+      "mcp_headless_args": [
+        "mcp"
+      ],
+      "course": false
     }
   ]
 }
